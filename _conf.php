@@ -14,6 +14,7 @@
  * The password cannot be blank.
  */
 
+$autodlHost = "";
 $autodlPort = 0;
 $autodlPassword = "";
 

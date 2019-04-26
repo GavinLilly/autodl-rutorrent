@@ -127,7 +127,7 @@ function sendAutodlCommand($data) {
 			throw new Exception("Could not create socket: " . getSocketError());
 
 		// Silence the warning because we're throwing an exception on failure anyway
-		if (!@socket_connect($socket, "127.0.0.1", $autodlPort))
+		if (!@socket_connect($socket, $autodlHost, $autodlPort))
 			throw new Exception("Could not connect: " . getSocketError($socket));
 
 		$data['password'] = $autodlPassword;
